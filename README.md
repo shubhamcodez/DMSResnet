@@ -9,5 +9,5 @@ The model incorporates advanced techniques like mixUp data augmentation, SE bloc
 constraint of 5 million. The proposed architecture showcases remarkable accuracy and generalization capabilities, making it suitable for real-world applications where computational resources are limited.
 
 ## Usage
-Run the Resnet50 notebook to train Resnet50. 
+Run the Resnet50 notebook to train Resnet50. <br>
 Use weights from Resnet50 to train a distillation notebook containing a smaller model. 
