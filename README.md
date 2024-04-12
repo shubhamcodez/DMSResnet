@@ -1,13 +1,34 @@
 # DMSResNet: Distilled MixUp Squeeze Residual Network
 
-This repository contains the code implementation of the paper titled "DMSResNet: Distilled MixUp Squeeze Residual Network", authored by Shubham Singh, Inder Khatri, and Xu Zhou. The paper proposes a novel architecture for image classification tasks, optimized for memory efficiency while maintaining high accuracy rates. The model is evaluated on the CIFAR-10 dataset using various techniques such as mixUp data augmentation, Squeeze-and-Excitation (SE) blocks, and knowledge distillation.
+This repository contains a submission for NYU ECE-GY 7123 Deep Learning S24 Kaggle Competition titled "Distilled MixUp Squeeze Residual Network", authored by Shubham Singh, Inder Khatri, and Xu Zhou. 
 
-## Abstract
+## Overview
+We propose a ResNet model evaluated on the CIFAR-10 dataset trained using various techniques such as mixUp data augmentation, Squeeze-and-Excitation (SE) blocks, and knowledge distillation.
 
-The paper introduces a Distilled MixUp Squeeze Residual Network (DMSResNet) architecture tailored for image classification tasks, particularly in resource-constrained environments. 
-The model incorporates advanced techniques like mixUp data augmentation, SE blocks, and knowledge distillation to achieve high accuracy rates on the CIFAR-10 dataset within a stringent parameter 
-constraint of 5 million. The proposed architecture showcases remarkable accuracy and generalization capabilities, making it suitable for real-world applications where computational resources are limited.
+## Model Specifications
+- **GPU:** P100 2 hours
+- **Batch Size:** 128
+- **Epochs:** 200
+- **Dropout:** 0.1
+- **Validation Accuracy:** 96.3% 
+- **Testing Accuracy:** 86.9%
+- **Optimizer:** Stochastic Gradient Descent
+- **Learning Rate:** 0.1
+
+### Architectures
+- **Teacher model:** ResNet50
+- **Student model:** Custom model with a ResNet containing 4.6 million parameters, mixUp, and dropout of 0.1.
+
+## Weight Files
+The `weights` folder contains 2 weight files: 
+1. Weights of the trained ResNet50 model.
+2. Weights of our final model. 
 
 ## Usage
-Run the Resnet50 notebook to train Resnet50. <br>
-Use weights from Resnet50 to train a distillation notebook containing a smaller model. 
+1. Run the `ResNet50.ipynb` notebook to train ResNet50.
+2. Use weights from ResNet50 to train a distillation notebook containing a smaller model.
+
+## Authors
+- Shubham Singh
+- Inder Khatri
+- Xu Zhou
